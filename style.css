@@ -10,14 +10,16 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   padding: 0 20px;
+  background: #f0f4f8; /* Soft light-blue background for the whole page */
 }
 
 /* Header */
 header {
-  background: #004080;
+  background: linear-gradient(90deg, #004080, #0066cc); /* Gradient header */
   color: white;
   text-align: center;
   padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 nav ul {
@@ -30,54 +32,80 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255,255,255,0.2);
 }
 
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 50px 20px;
-  background-color: #f4f4f4;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #99ccff, #cce6ff); /* Soft gradient for hero */
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* Services Section */
 .services {
   padding: 40px 20px;
+  background-color: #ffffff; /* Clean white section with soft shadow */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #004080;
 }
 
 .services ul {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
   padding: 0;
 }
 
 .services li {
-  background-color: #e0e0e0;
-  padding: 15px;
+  background: linear-gradient(135deg, #e6f2ff, #cce6ff); /* Gradient cards */
+  padding: 20px;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: transform 0.3s, background 0.3s;
 }
 
 .services li:hover {
-  background-color: #c0c0c0;
+  background: linear-gradient(135deg, #cce6ff, #99ccff);
+  transform: translateY(-5px);
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 30px 20px;
-  background-color: #333;
+  background: linear-gradient(90deg, #004080, #0066cc);
   color: #fff;
+  margin-top: 20px;
 }
 
 footer a {
   color: #ffd700;
   text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #ffeb99;
 }
 
 /* Media Queries for Mobile */
@@ -85,13 +113,12 @@ footer a {
   nav ul {
     flex-direction: column;
   }
-  
+
   .hero {
-    padding: 30px 10px;
+    padding: 40px 10px;
   }
 
   .services {
     padding: 20px 10px;
   }
 }
-
