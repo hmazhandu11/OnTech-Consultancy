@@ -10,12 +10,12 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   padding: 0 20px;
-  background: #f0f4f8; /* Soft light-blue background for the whole page */
+  background: #f0f4f8; /* Light-blue background for entire site */
 }
 
 /* Header */
 header {
-  background: linear-gradient(90deg, #004080, #0066cc); /* Gradient header */
+  background: linear-gradient(90deg, #004080, #0066cc);
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -26,7 +26,7 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Allows items to wrap on small screens */
+  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -43,20 +43,20 @@ nav a:hover {
   background-color: rgba(255,255,255,0.2);
 }
 
-/* Hero Section */
+/* Hero Section (only for index.html) */
 .hero {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(to right, #99ccff, #cce6ff); /* Soft gradient for hero */
+  background: linear-gradient(to right, #99ccff, #cce6ff);
   border-radius: 10px;
   margin: 20px 0;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Services Section */
+/* Services Section (only for index.html) */
 .services {
   padding: 40px 20px;
-  background-color: #ffffff; /* Clean white section with soft shadow */
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
@@ -76,7 +76,7 @@ nav a:hover {
 }
 
 .services li {
-  background: linear-gradient(135deg, #e6f2ff, #cce6ff); /* Gradient cards */
+  background: linear-gradient(135deg, #e6f2ff, #cce6ff);
   padding: 20px;
   text-align: center;
   border-radius: 10px;
@@ -87,6 +87,28 @@ nav a:hover {
 .services li:hover {
   background: linear-gradient(135deg, #cce6ff, #99ccff);
   transform: translateY(-5px);
+}
+
+/* About Section (only for about.html) */
+.about {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #004080;
+}
+
+.about p {
+  margin-bottom: 15px;
+  color: #333;
+  line-height: 1.8;
 }
 
 /* Footer */
@@ -114,11 +136,9 @@ footer a:hover {
     flex-direction: column;
   }
 
-  .hero {
-    padding: 40px 10px;
-  }
-
-  .services {
+  .hero,
+  .services,
+  .about {
     padding: 20px 10px;
   }
 }
